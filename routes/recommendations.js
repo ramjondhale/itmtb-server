@@ -22,6 +22,7 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
   const recommend = req.body;
+
   const recommendation = new Recommendation(recommend);
   try {
     const r1 = await recommendation.save();

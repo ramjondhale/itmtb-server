@@ -13,6 +13,10 @@ const recommendationSchema = new mongoose.Schema({
     type: String,
     required: false,
   },
+  strikePrice: {
+    type: Number,
+    required: false,
+  },
   buyOrSell: {
     type: String,
     required: true,
