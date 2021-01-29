@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   try {
-    const recommendations = await Recommendation.find();
+    const recommendations = await Recommendation.findOne();
     res.status(200).json(recommendations);
   } catch (err) {
     res.status(404).json({ message: err.message });
